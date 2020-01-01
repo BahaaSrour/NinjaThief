@@ -1,17 +1,44 @@
 console.log("Character file are oped")
 
-function Character(_name, _health, _lives, _startPositionX,_startPositionY, _positionX,_positionY, _Noshuriken, _AttackRang, _direction) {
+
+
+function Character(_name, _health) {
     this.name =_name
-    this.health = _health;
+    //this.health = _health;
     this.lives = _lives;
-    this.startPositionX=_startPositionX;
-    this.startPositiony=_startPositionY;
-    this.Position = _positionX;
-    this.Position = _positionY;
-    this.Noshuriken = _Noshuriken;
-    this.AttackRang = _AttackRang
-    this.direction = _direction
+   // this.startPositionX= {x:0,y:0};
+    this.startPosition = {x:30,y:30};
+    this.Noshuriken = 3;
+    this.AttackRang = 100;
+    this.direction = 0;
   };
+
+  Character.prototype.setPosition= function(x,y){
+   this.startPosition.x= x;
+   this.startPosition.y= y;
+  }
+
+  Character.prototype.getPosition= function(){
+   return this.startPosition;
+   }
+
+
+   Character.prototype.setNoshuriken= function(x){
+    this.Noshuriken= x;
+   }
+   Character.prototype.getNoshuriken= function(){
+    return this.Noshuriken;
+    }
+ 
+////////////////////////////////
+Character.prototype.setAttackRang= function(x){
+  this.AttackRang= x;
+ }
+ Character.prototype.getAttackRang= function(){
+  return this.AttackRang;
+  }
+
+
 
   Character.prototype.walk = function() {
     this.Position +=10;
