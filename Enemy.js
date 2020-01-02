@@ -1,22 +1,22 @@
-var Enemy = {
-     health: 0,
-     positionRange: new Array(4),
-     visualRange: 20,
-     attackRnage: 15,
 
-    Attack: function () {
-        //throw weapon animation
-    },
+function Enemy(_name, _lives)  {
 
-    Walk: function (speed) {
-        //setpositionX
-        //walk animation at 'speed'  
-    },
+    Character.call(this,_name, _lives);
 
-    jump: function () {
-        //setpostitonY
-    },
-
-      
+    this.visualRange = 150; //bigger than attack range defined in character
     
+};
+
+Enemy.prototype.Die =  function(){
+    Character.prototype.Die.call(this);
+    console.log("died from player");
+}
+
+Enemy.prototype.setvisualRange= function(x){
+    this.visualRange= x;
+};
+
+Enemy.prototype.getvisualRange= function(){
+   
+    return this.visualRange;
 };
