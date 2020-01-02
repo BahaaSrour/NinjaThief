@@ -2,7 +2,7 @@ console.log("Character file are oped")
 
 
 
-function Character(_name, _health) {
+function Character(_name, _lives) {
     this.name =_name
     //this.health = _health;
     this.lives = _lives;
@@ -40,15 +40,25 @@ Character.prototype.setAttackRang= function(x){
 
 
 
-  Character.prototype.walk = function() {
-    this.Position +=10;
+  Character.prototype.walk = function(speed) {
+    this.Position +=speed;
     console.log("Walk Function from character class");
   };
   
-  Character.prototype.Attcked = function(dropPionts) {
-    this.health -=dropPionts;
+  Character.prototype.Attcked = function() {
+    this.lives -=1;
     console.log("dropPionts Function from character class");
   };
+
+  Character.prototype.Die=function() {
+    if(this.lives==0)
+    {console.log("die")}
+    else
+    {
+      console.log("I `m  a live")
+    }
+  }
+
 
   Character.prototype.ChangeDirection =function () {
     // if(this.)

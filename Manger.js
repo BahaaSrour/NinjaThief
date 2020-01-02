@@ -20,8 +20,8 @@ var game = new Phaser.Game(config);
 function preload ()
 {
     //character and trying creating an object
-//    var person= new Character("ali",100,3,50,50,80,80,3,15,1)
-//    console.log("name: "+ person.GetData())
+   var person= new Character("ali",100,3,50,50,80,80,3,15,1)
+   console.log("name: "+ person.GetData())
 
 
     this.load.image('red', 'Assets/sky.png')
