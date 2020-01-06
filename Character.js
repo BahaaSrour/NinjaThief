@@ -4,11 +4,9 @@ console.log("Character file are oped")
 
 function Character(_name, _lives) {
     this.name =_name
-    //this.health = _health;
     this.lives = _lives;
-   // this.startPositionX= {x:0,y:0};
-    this.startPosition = {x:30,y:30};
-    this.Noshuriken = 3;
+    this.Position = {x:30,y:30};
+    // this.Noshuriken = 3;
     this.AttackRang = 100;
     this.direction = 0;
   };
@@ -45,18 +43,15 @@ Character.prototype.setAttackRang= function(x){
     console.log("Walk Function from character class");
   };
   
-  Character.prototype.Attcked = function() {
-    this.lives -=1;
-    console.log("dropPionts Function from character class");
+  Character.prototype.Attackedbyshuriken= function() 
+  {
+    return new shuriken.create(direction)
   };
 
-  Character.prototype.Die=function() {
-    if(this.lives==0)
+  Character.prototype.Die=function() 
+  {
     {console.log("die")}
-    else
-    {
-      console.log("I `m  a live")
-    }
+    
   }
 
 
@@ -68,4 +63,16 @@ Character.prototype.setAttackRang= function(x){
     return this.name;
   }
  
+
+  
+Player.prototype.TakeDamge= function(){
+   
+  this.lives--;
+
+  if(this.lives==0)
+  {
+    this.Die();
+  }
+
+};
   
