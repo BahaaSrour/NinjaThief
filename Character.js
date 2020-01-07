@@ -1,8 +1,7 @@
 console.log("Character file are oped")
 
-
-
 function Character(_name, _lives) {
+ 
     this.name =_name
     //this.health = _health;
     this.lives = _lives;
@@ -11,6 +10,7 @@ function Character(_name, _lives) {
     this.Noshuriken = 3;
     this.AttackRang = 100;
     this.direction = 0;
+    
   };
 
   Character.prototype.setPosition= function(x,y){

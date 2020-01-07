@@ -2,10 +2,11 @@
 function Enemy(_name, _lives)  {
 
     Character.call(this,_name, _lives);
-
-    this.visualRange = 150; //bigger than attack range defined in character
-    
+    this.visualRange = 150; //bigger than attack range defined in character    
 };
+
+Enemy.prototype = new Character();
+Enemy.prototype.constructor = Character;
 
 Enemy.prototype.Die =  function(){
     Character.prototype.Die.call(this);
