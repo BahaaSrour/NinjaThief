@@ -6,6 +6,8 @@ function Player(_name, _lives,_Noshuriken)  {
 
 };
 
+Player.prototype = Object.create(Character.prototype);
+
 Player.prototype.Attackedbyshuriken =  function(){
     this.Noshuriken--;
     if(Noshuriken>0){
