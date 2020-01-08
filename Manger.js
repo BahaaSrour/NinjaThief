@@ -21,6 +21,7 @@ var game = new Phaser.Game(config);
 
 function preload ()
 {
+<<<<<<< HEAD
     this.load.image('background', 'assets/background.jpg');
     this.load.image('box', 'assets/box.png');
     this.load.image('key', 'assets/key.png');
@@ -44,6 +45,11 @@ function create ()
     platforms.create(500, 690, 'ground').setScale(5,0.2).refreshBody();
 
     
+=======
+    //character and trying creating an object
+   var person= new Character("ali",3)
+   console.log("name: "+ person.GetData())
+>>>>>>> 3363a5787ab3b4cf4be5bcd618f20e2cd33dfff6
 
     door = this.add.sprite(1450, 630, 'door').setScale(0.25);
     
@@ -115,10 +121,16 @@ function create ()
         door.anims.play('doorClose',true);
     }
 
+<<<<<<< HEAD
+=======
+    this.load.image('red', 'Assets/sky.png')
+    
+>>>>>>> 3363a5787ab3b4cf4be5bcd618f20e2cd33dfff6
 }
 
 function update ()
 {
+<<<<<<< HEAD
     //door.anims.play('doorOpen',true);
 //    door.anims.play('doorClose',true);
     cursors = this.input.keyboard.createCursorKeys();
@@ -141,4 +153,9 @@ function update ()
     if (cursors.up.isDown && player.body.touching.down) {
         player.setVelocityY(-330);
     }
+=======
+ this.add.image(100,100,"red").setScale(2);
+ //if(keyinut == space)
+ //{ player.attack();}
+>>>>>>> 3363a5787ab3b4cf4be5bcd618f20e2cd33dfff6
 }
